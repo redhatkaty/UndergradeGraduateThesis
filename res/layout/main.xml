@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EFEFEF" >
+ <!--#EFEFEF  CED3D6-->
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="等待音频文件播放" />    
+
+    <org.bupt.EngLearning.demo.CaptionView
+        android:id="@+id/mylrc"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/info" />
+
+	<LinearLayout  
+		android:id="@+id/musiccontrol"
+        xmlns:android="http://schemas.android.com/apk/res/android"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_alignParentBottom="true"  
+        android:orientation="vertical" 
+        android:layout_below="@+id/mylrc">  
+	
+		<LinearLayout  
+			android:id="@+id/zoom"
+	        xmlns:android="http://schemas.android.com/apk/res/android"  
+	        android:layout_width="wrap_content"  
+	        android:layout_height="wrap_content"  
+	        android:layout_alignParentTop="true"  
+	        android:layout_gravity="center_horizontal"
+	        android:orientation="horizontal" 
+	        android:paddingTop="5dp"
+	        >			<ImageButton
+			    android:id="@+id/zoomout"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:src="@drawable/zoomoutbtn" 
+			    android:background="@android:color/transparent"/>
+			
+			<ImageButton
+			    android:id="@+id/zoomin"
+			   android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:src="@drawable/zoominbtn" 
+			    android:background="@android:color/transparent"/>
+			
+		</LinearLayout>
+		
+		    <LinearLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:id="@+id/buttons"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"       
+		        android:layout_gravity="center_horizontal"
+		        android:orientation="horizontal" >
+			
+				<ImageButton
+				    android:id="@+id/pause"
+				   android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"  
+				    android:paddingLeft="50dp"
+				    android:src="@drawable/pausebtn" 
+				    android:background="@android:color/transparent"/>
+		        
+				<ImageButton
+				    android:id="@+id/play"
+				    android:src="@drawable/playbtn"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:background="@android:color/transparent"/>		
+	
+				<ImageButton
+				    android:id="@+id/stop"
+				    android:src="@drawable/stopbtn"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    
+				    android:background="@android:color/transparent"/>
+			  
+			<org.bupt.EngLearning.demo.SeekBar
+				android:id="@+id/volseekBar"
+				android:layout_width="wrap_content"
+				android:layout_height="74dp"
+				android:layout_alignParentRight="true"
+				android:layout_toLeftOf="@+id/buttons"
+				android:paddingTop="10dip" 
+				android:progressDrawable="@drawable/volseekbar_img"
+				android:thumb="@drawable/volthumb"
+				android:thumbOffset="10dip"
+				android:max="100"
+				 />
+			 <!--<SeekBar
+			    android:id="@+id/volseekBar"
+			    android:layout_width="wrap_content"
+			    android:layout_height="80dp"
+			    android:progressDrawable="@drawable/seekbar_img"
+			    android:thumb="@drawable/thumb" 
+			    android:paddingTop="40dp"
+			    android:paddingRight="10dp"
+			    android:layout_weight="5"/>-->
+			
+    	</LinearLayout>
+	<SeekBar
+	    android:id="@+id/seekbar"
+	    android:max="100"
+	    android:layout_width="390dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/buttons"
+	    android:layout_gravity="center_vertical"
+	    
+	    android:paddingLeft="10dp"
+	    android:paddingRight="80dp"
+	    android:paddingTop="10dp"
+	    android:paddingBottom="5dp"
+	    
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="5dp"
+	    
+	    
+	    android:progressDrawable="@drawable/seekbar_img"
+		android:thumb="@drawable/thumb" />
+        <!--android:layout_marginBottom="5dp"-->
+	   <!-- android:paddingTop="10dp"-->
+	    
+	    
+	</LinearLayout>
+
+</RelativeLayout>
